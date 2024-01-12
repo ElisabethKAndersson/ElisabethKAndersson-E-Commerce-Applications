@@ -1,0 +1,1 @@
+1. Test Admin is working by logging in with superuser
