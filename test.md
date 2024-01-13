@@ -1,1 +1,2 @@
-1. Test Admin is working by logging in with superuser
+1. Test Admin is working by logging in with superuser. - OK
+2. Test that base and home with test text on both - OK
