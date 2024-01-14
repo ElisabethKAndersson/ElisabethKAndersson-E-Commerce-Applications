@@ -4,6 +4,6 @@ from django.shortcuts import render
 
 
 def contact(request):
-    """ Index page """
+    """ Contact page """
 
-    return render(contact, 'contact/contact.html')
+    return render(request, 'contact/contact.html')
