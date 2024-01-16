@@ -3,6 +3,6 @@ from django.shortcuts import render
 # Create your views here.
 
 def services(request):
-    """ Index page """
+    """ Presenting and selling services """
 
     return render(request, 'services/services.html')
