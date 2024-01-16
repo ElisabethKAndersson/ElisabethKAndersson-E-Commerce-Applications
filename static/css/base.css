@@ -4,7 +4,13 @@
     background-color: #555252;
 }
 
+.navbar {
+    padding: 0;
+}
 
+.shop-icon {
+    float: right;
+}
 
 /* Shop */
 .product-img {
