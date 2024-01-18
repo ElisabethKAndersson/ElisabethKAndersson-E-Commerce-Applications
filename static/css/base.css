@@ -1,6 +1,6 @@
 /* Base */
 
-.navbar-cont {
+.navbar-style {
     background-color: #555252;
 }
 
@@ -10,6 +10,18 @@
 
 .shop-icon {
     float: right;
+}
+
+/* Shop */
+.product-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product_row {
+    margin: 20px;
 }
 
 /* Shop */

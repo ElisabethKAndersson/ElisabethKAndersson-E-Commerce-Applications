@@ -8,4 +8,4 @@
 
 
 # Images in shop not vertically aligned.
-    Tried: mx-auto
+    SOLUTION: Removed some bootstrap code that I wasn't using anymore
