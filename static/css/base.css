@@ -13,13 +13,20 @@
 }
 
 /* Shop */
+
+.shop-text {
+    margin: 40px;
+
+}
+
+
 .product-img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    margin-bottom: 10px;
 }
 
-.product_row {
-    margin: 20px;
+.product {
+    margin-top: 20px
+    margin-bottom: 20px;
 }
