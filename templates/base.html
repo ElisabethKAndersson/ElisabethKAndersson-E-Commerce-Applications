@@ -11,9 +11,9 @@
     {% endblock %} {% block css %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %} {% block extra_css %} {% endblock %}
     {% block js %}
@@ -87,14 +87,14 @@
                 <li></li>
                 <li class="list-inline-item shop-icon">
                     <a class="text-center{% if grand_total %}text-info font-weight-bold{% else %}text-light{% endif %} nav-link"
-                        href="{% url 'bag' %}">
+                        href="{% url 'view_bag' %}">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
-                                ${{ grand_total|floatformat:2 }}
+                                £{{ grand_total|floatformat:2 }}
                                 {% else %}
-                                $0.00
+                                £0.00
                                 {% endif %}
                             </p>
                         </div>
