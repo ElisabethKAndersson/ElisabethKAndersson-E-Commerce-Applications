@@ -48,3 +48,11 @@ body {
     margin-top: 20px
     margin-bottom: 20px;
 }
+
+/* Bag */
+
+.bag-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
