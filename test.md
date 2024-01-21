@@ -2,3 +2,4 @@
 2. Test that base and home with test text on both. - OK
 3. Test all links in navbar. - OK
 4. Check so that products are shown in admin page. -OK
+5. Test so that products are added to shopping bag. - OK
