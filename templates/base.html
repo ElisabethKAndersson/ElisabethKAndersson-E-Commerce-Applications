@@ -50,9 +50,21 @@
                 <li class="nav-item ></li>">
                 <a class="nav-link text-light" href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'services' %}">Services</a>
+                <li class="list-inline-item dropdown">
+                    <a class="text-light nav-link" href="#" id="user-options" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <div class="text-center">
+                        <p class="my-0">Services</p>
+                    </div>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <a href="{% url 'services' %}" class="dropdown-item">Services</a>
+                        <a href="{% url 'services_prices' %}" class="dropdown-item">Prices and Memberships</a>
+                        <a href="{% url 'walks' %}" class="dropdown-item">Senior Walks</a>
+                        </a>
+                    </div>
                 </li>
+
+
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{% url 'shop' %}">Shop</a>
                 </li>
@@ -81,7 +93,7 @@
                 </li>
 
             </ul>
-            <ul class="mt-2">
+            <ul class="float-right">
                 <li class="list-inline-item shop-icon">
                     <a class="text-center{% if grand_total %}text-info font-weight-bold{% else %}text-light{% endif %} nav-link"
                         href="{% url 'view_bag' %}">
