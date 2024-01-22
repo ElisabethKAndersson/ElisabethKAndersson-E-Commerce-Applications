@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 if os.path.exists("env.py"):
   import env
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-ack1uza1a0s.ws-eu107.gitpod.io']
 
@@ -116,6 +117,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+#DATABASES = {
+#    'default': dj_database_url.parse('postgres://rivbyfkl:dq-VVnjWPiBsd2EQgyhAi6x4o_6clRBi@hattie.db.elephantsql.com/rivbyfkl')
+# }
 
 
 # Password validation
