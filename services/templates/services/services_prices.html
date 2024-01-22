@@ -1,15 +1,41 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div class="container h-100">
-    <div class="row h100"></div>
-    <div class="col-7 col-md-6 my-auto">
-        <h1 class="my-5">Prices and Memberships</h1>
-        <p>
 
-        </p>
+<div class="d-flex justify-content-center shop-text">
+  <div class="row">
+    <div class="col mt-3">
+      <h2 class="text-center">Services</h2>
+{% for service in services %}
+<div class="container products">
+  <div class="row align-items-start">
+    <div class="col-12 col-md-4 service">
     </div>
-    <div class="col-7 col-md-6 my-auto">
-        <img src="" alt="">
+    <div class="col-12 col-md-8">
+      <p class="mb-0 product_name">{{ service.name }}</p>
+      <p class="mt-3 product_description">{{ service.description }}</p>
+      <p class="lead mb-0 text-left font-weight-bold">£{{ service.price }}</p>
+      <form class="form" action="{% url 'add_to_bag' service.id %}" method="POST">
+        {% csrf_token %}
+                <div class="input-group-sm">
+                    <input
+                    class="form-control"
+                    type="number"
+                    id="{{ service.id }}"
+                    />
+                </div>
+                </div>
+            </div>
+          <div class="col-8">
+            <input
+              type="submit"
+              class="btn btn-secondary btn-sm bottom "
+              value="Add to Bag"
+            >
+          </div>
+        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+        </div>
+      </form>
     </div>
+  </div>
 </div>
-
-{% endblock %}
+<hr />
+{% endfor %} {% endblock %}
