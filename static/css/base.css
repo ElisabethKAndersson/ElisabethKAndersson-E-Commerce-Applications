@@ -47,4 +47,18 @@ body {
     width: 100px;
     height: 100px;
     object-fit: cover;
+    
+
+}
+
+
+/* Services  */
+
+.carousel .carousel-item {
+    max-height:450px;
+}
+
+.carousel-item img {
+    max-height:450px;
+    object-fit: cover;
 }
