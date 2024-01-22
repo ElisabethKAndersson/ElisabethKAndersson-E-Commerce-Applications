@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-ack1uza1a0s.ws-eu107.gitpod.io',
-                '.herokuapp.com']
+                '.herokuapp.com',
+                'senior-fitness-a9e489407d94.herokuapp.com/']
 
 
 # Application definition
