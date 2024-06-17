@@ -28,9 +28,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
-ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-ack1uza1a0s.ws-eu107.gitpod.io',
+ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-b14dt1eagwg.ws.codeinstitute-ide.net',
                 '.herokuapp.com',
                 'senior-fitness-a9e489407d94.herokuapp.com/']
 
@@ -171,6 +171,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
