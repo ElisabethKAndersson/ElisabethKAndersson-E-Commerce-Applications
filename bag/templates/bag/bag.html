@@ -1,4 +1,6 @@
 {% extends "base.html" %} {% load static %}
+{% load bag_tools  %}
+
 {% block content %}
 <div class="container mb-2">
     <div class="row">
@@ -26,11 +28,11 @@
 
                     {% for item in bag_items %}
                     <tr>
-                        <td class="p-3 w-25">
+                        <td class="p-3 w-30">
                             <img class="bag-img img-fluid rounded-sm mx-auto border border-secondary" 
                             src="{{ item.product.image.url }}">
                         </td>
-                        <td class="py-3">
+                        <td class="py-3 w-30">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                             <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
@@ -41,12 +43,9 @@
                             <p class="my-0">{{ item.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
-                        <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
-                        </td>
-                        <td class="py-3 w-25">
+                        <td class="py-3 w-15">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
                                 <div class="form-group">
