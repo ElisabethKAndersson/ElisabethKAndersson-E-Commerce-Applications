@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'shop',
     'contact',
     'bag',
-
+    'checkout',
     'storages',
 ]
 
@@ -208,4 +208,5 @@ if 'USE_AWS' in os.environ:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+FREE_DELIVERY_THRESHOLD = 55
 STANDARD_DELIVERY_PERCENTAGE = 10
