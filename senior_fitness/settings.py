@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'storages',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -134,10 +136,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
-#DATABASES = {
-#    'default': dj_database_url.parse('postgres://rivbyfkl:dq-VVnjWPiBsd2EQgyhAi6x4o_6clRBi@hattie.db.elephantsql.com/rivbyfkl')
-# }
 
 
 # Password validation
@@ -221,3 +219,4 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'sek'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
