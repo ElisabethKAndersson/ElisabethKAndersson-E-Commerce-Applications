@@ -4,7 +4,7 @@
     "model": "services.service",
     "fields": {
       "name": "Gym, single session",
-      "price": 9.99
+      "price": 99
 }
   },
   {
@@ -12,7 +12,7 @@
     "model": "services.service",
     "fields": {
       "name": "Tennis, single session",
-      "price": 8.99
+      "price": 89
 }
   },
   {
@@ -21,7 +21,7 @@
     "fields": {
       "name": "Monthly Fitness card",
       "description": "Access to both gym and tennis for a month",
-      "price": 90.00
+      "price": 900
 }
     },
 
@@ -31,7 +31,7 @@
     "fields": {
       "name": "Annual Fitness card",
       "description": "Access to both gym and tennis for a year",
-      "price": 350.00
+      "price": 3500
     }
   }
 ]

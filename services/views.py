@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Service
 
 # Create your views here.
 
@@ -10,6 +11,7 @@ def services(request):
 def services_prices(request):
     """ Prices and memberships """
 
+    services = Service.objects.all()
 
     context = {
         'services': services,

@@ -6,7 +6,7 @@
       "sku": "sw-bl-fa-ac",
       "name": "Smart Watch",
       "description": "Blood Oxygen Sensor, Biological Data Sensor, Barometer, Blood Pressure Monitor, Bluetooth Enabled, Caller ID, Camera, Fitness Tracker, GPS, Heart Rate Monitor, Music Player, Speakerphone, Touchscreen, Waterproof, Fitness Tracker (Pedometer/Calories/Distance), Sports Modes, Call Notifications, Call Receive/Dial, Music & Camera Control, Brightness Adjustment, Weather Display, Stopwatch, Timer, Calculator, Alarm Clock, Games, Armband, Average Heart Rate, Average Speed",
-      "price": 59.99,
+      "price": 599,
       "image_url": "smart-watch-889639_1280.jpg",
       "image": "smart-watch-889639_1280.jpg"
     }
@@ -18,7 +18,7 @@
       "sku": "mppm-bl-fa-ht",
       "name": "Manual Blood Pressure Monitor",
       "description": "Sphygmomanometer is equipped with a large dial for easy reading, metal body, non stop manometer mechanism, a pinpointed air needle valve and smooth pressure relief.",
-      "price": 12.49, 
+      "price": 129, 
       "image_url": "blood-pressure-1006791_1280.jpg",
       "image": "blood-pressure-1006791_1280.jpg"
     }
@@ -30,7 +30,7 @@
       "sku": "wb-blu-ac",
       "name": "Water Bottle",
       "description": "Fitness Water bottle 0,7L, blue",
-      "price": 6.99,
+      "price": 69,
       "image_url": "caraizela-698140_1920.jpg",
       "image": "caraizela-698140_1920.jpg"
     }
@@ -42,7 +42,7 @@
       "sku": "feq-blu-eq",
       "name": "Home Fitness Equipment Package",
       "description": "Yoga ball, Dumbells 8LB, Resistance band, Half Balance Ball, ",
-      "price": 95.99,     
+      "price": 959,     
 	  "image_url": "home-fitness-equipment-1840858_1280.jpg",
       "image": "home-fitness-equipment-1840858_1280.jpg"
     }
@@ -54,7 +54,7 @@
       "sku": "kb-3pa-eq",
       "name": "Kettlebells",
       "description": "Three pack, kettlebells, 4, 6 and 8 kilograms",
-      "price": 49.99,
+      "price": 499,
  "image_url": "kettlebells-1677217_1280.jpg",
       "image": "kettlebells-1677217_1280.jpg"
     }
@@ -66,7 +66,7 @@
       "sku": "np-pa-eq",
       "name": "Nordic Poles",
       "description": "Nordic Walking Poles for walking on asphalt or in terrain. Delivered in pairs",
-      "price": 30.99,
+      "price": 299,
       "image_url": "nordic-poles-4607092_1280.png",
       "image": "nordic-poles-4607092_1280.png"
     }
@@ -78,7 +78,7 @@
       "sku": "hg-blu-eq",
       "name": "Hand Grip Strengthener",
       "description": "Hand Grip Strengthener with foam handle",
-      "price": 23.79,
+      "price": 239,
       "image_url": "healthy-1283793_1280.jpg",
       "image": "healthy-1283793_1280.jpg"
     }
@@ -90,7 +90,7 @@
       "sku": "tr-blu-teq",
       "name": "Babolat Tennis Racquet Strung",
       "description": "New frame to start or restart tennis",
-      "price": 109.99,
+      "price": 1099,
       "image_url": "tennis-rackets-6747234_1920.jpg",
       "image": "tennis-rackets-6747234_1920.jpg"
     }
@@ -102,7 +102,7 @@
       "sku": "tb-3pa-teq",
       "name": "Tennis balls, 3-pack",
       "description": "3 pack tennis balls with high resilience. Made with pure all-natural rubber,",
-      "price": 9.99,
+      "price": 99,
       "image_url": "the-ball-4388381_1920.jpg",
       "image": "the-ball-4388381_1920.jpg"
     }
