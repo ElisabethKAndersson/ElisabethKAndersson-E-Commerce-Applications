@@ -5,6 +5,7 @@ from .models import Service
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
+        'description',
         'price',
     )
 

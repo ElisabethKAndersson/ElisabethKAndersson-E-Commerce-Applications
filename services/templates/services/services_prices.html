@@ -10,8 +10,8 @@
     <div class="col-12 col-md-4 service">
     </div>
     <div class="col-12 col-md-8">
-      <p class="mb-0 product_name">{{ service.name }}SEK</p>
-      <p class="lead mb-0 text-left font-weight-bold">{{ service.price }}SEK</p>
+      <p class="mb-0 product_name">{{ services.name }}SEK</p>
+      <p class="lead mb-0 text-left font-weight-bold">{{ services.price }}SEK</p>
       <form class="form" action="{% url 'add_to_bag' service.id %}" method="POST">
         {% csrf_token %}
                 <div class="input-group-sm">
