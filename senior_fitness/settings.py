@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-tvp1ms8yab3.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-tv020sh9vzv.ws.codeinstitute-ide.net',
                 '.herokuapp.com',
                 'senior-fitness-a9e489407d94.herokuapp.com/']
 
@@ -68,6 +68,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'senior_fitness.urls'

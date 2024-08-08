@@ -9,7 +9,5 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
     )
 
-    ordering = ('id',)
-
 
 admin.site.register(Service, ProductAdmin)

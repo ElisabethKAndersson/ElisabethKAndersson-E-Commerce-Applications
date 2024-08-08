@@ -3,33 +3,58 @@
 <div class="d-flex justify-content-center shop-text">
   <div class="row">
     <div class="col mt-3">
-      <h2 class="text-center">Services</h2>
+      <h2 class="text-center mb-5">Service</h2>
+            <p class="text-center">You can pay for our services either online or at the gym.</p>
+        <p class="text-center">Please note that you may be asked to show identification before using our facilities, 
+        as our services are exclusively available to individuals aged 65 and older. </p>
     </div>
   </div>
 </div>
 <hr>
-
-{% for service in services %}
-<div class="container products">
-  <div class="row align-items-start">
-    <div class="col-12 col-md-8">
-      <p class="mb-0 service_name">{{ service.name }}</p>
-      <p class="mt-3 service_description">{{ service.description }}</p>
-      <p class="lead mb-0 text-left font-weight-bold">{{ service.price }}SEK</p>
-      <form class="form" action="{% url 'add_to_bag' service.id %}" method="POST">
-        {% csrf_token %}
-        <div class="form-row">
-            <input
-              type="submit"
-              class="btn btn-secondary btn-sm bottom"
-              value="Add to Bag"
-            >
+{% if request.user.is_authenticated %}
+    {% for service in services %}
+      <div class="container services">
+        <div class="row align-items-start">
+          <div class="col-12 col-md-8">
+            <h3 class="mb-0 service_name">{{ service.name }}</h3>
+            <p class="mt-3 service_description font-weight-light">{{ service.description }}</p>
+            <p class="lead mb-0 text-left font-weight-bold">{{ service.price }}SEK</p>
+            <form class="form" action="{% url 'add_to_bag' service.id %}" method="POST">
+              {% csrf_token %}
+              <div class="form-row">
+                  <div class="col-4">
+                    <div class="form-group w-75">
+                        <div class="input-group-sm">
+                            <input
+                            class="form-control qty_input"
+                            type="number"
+                            name="quantity"
+                            value="1"
+                            min="1"
+                            max="1"
+                            data-item_id="{{ service.id }}"
+                            id="id_qty_{{ service.id }}"
+                            />
+                        </div>
+                    </div>
+                  </div>
+                <div class="col-8">
+                  <input
+                    type="submit"
+                    class="btn btn-secondary btn-sm bottom "
+                    value="Add to Bag"
+                  >
+                </div>
+              <input type="hidden" name="redirect_url" value="{{ request.path }}">
+              </div>
+            </form>
           </div>
-        <input type="hidden" name="redirect_url" value="{{ request.path }}">
         </div>
-      </form>
-    </div>
-  </div>
-</div>
-<hr />
-{% endfor %} {% endblock %}
+      </div>
+      <hr />
+    {% endfor %}
+{% else %}
+      <p class="text-center font-weight-bold">You need to <a href="{% url 'account_login' %}">log in</a> or <a href="{% url 'account_signup' %}">signup</a> to buy our services online.</p>
+{% endif %}
+{% endblock %}
+

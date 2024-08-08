@@ -34,7 +34,6 @@
                         </td>
                         <td class="py-3 w-30">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">{{ item.product.price }}SEK</p>
@@ -48,12 +47,11 @@
                         <td class="py-3 w-15">
                             <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                                 {% csrf_token %}
-                                <div class="form-group">
-                                        <input class="form-control form-control-sm qty_input" type="number"
+                                <div class="form-group update-link">
+                                        <input class="form-control form-control-sm qty_input update-link text-info" type="number"
                                             name="quantity" value="{{ item.quantity }}" min="1" max="20"
                                             data-item_id="{{ item.item_id }}"
                                             id="id_qty_{{ item.item_id }}">
-                                    </div>
                                 </div>
                             </form>
                             <a class="update-link text-info"><small>Update</small></a>
@@ -115,7 +113,7 @@
 
 <script type="text/javascript">
     // Update quantity on click
-    $('.update-link').click(function(e) {
+    $('.update-link').change(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
     })

@@ -2,6 +2,7 @@ from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
 from shop.models import Product
+from services.models import Service
 
 
 def bag_contents(request):
