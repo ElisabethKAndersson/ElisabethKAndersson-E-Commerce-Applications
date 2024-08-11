@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     'contact',
     'bag',
     'checkout',
+    'my_account',
+
     'storages',
 
     'crispy_forms',
@@ -111,6 +113,7 @@ SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+ACCOUNT_FORMS = {'signup': 'my_account.forms.CustomSignupForm'}
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'

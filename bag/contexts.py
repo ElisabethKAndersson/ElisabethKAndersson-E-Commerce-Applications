@@ -36,3 +36,35 @@ def bag_contents(request):
     }
 
     return context
+
+def bag_service_contents(request):
+
+    bag_service_items = []
+    total = 0
+    product_count = 0
+    service_bag = request.session.get('service_bag', {})
+
+    for service_id, quantity in bag.service():
+        service = get_object_or_404(Service, pk=service_id)
+        total += quantity * servicet.price
+        service_count += quantity
+        bag_service_items.append({
+            'service_id': service_id,
+            'quantity': quantity,
+            'service': service,
+        })
+
+
+    delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
+
+    grand_total = delivery + total
+
+    context = {
+        'bag_service_items': bag_service_items,
+        'total': total,
+        'service_count': service_count,
+        'delivery': delivery,
+        'grand_total': grand_total,
+    }
+
+    return context
