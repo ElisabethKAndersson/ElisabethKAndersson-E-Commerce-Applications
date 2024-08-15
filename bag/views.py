@@ -49,7 +49,7 @@ def remove_from_bag(request, item_id):
 
         bag.pop(item_id)
 
-        request.session['bag'] = bag
+        request.session['service_bag'] = service_bag
         return HttpResponse(status=200)
     except Exception as e:
         return HttpResponse(status=500)
@@ -59,12 +59,13 @@ def add_service_to_bag(request, service_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    bag = request.session.get('bag', {})
+    service_bag = request.session.get('service_bag', {})
 
-    if service_id in list(bag.keys()):
-        bag[service_id] += quantity
+    if service_id in list(service_bag.keys()):
+        service_bag[service_id] += quantity
     else:
-        bag[service_id] = quantity
+        service_bag[service_id] = quantity
     
-    request.session['bag'] = bag
+    request.session['service_bag'] = service_bag
+    print(service_bag)
     return redirect(redirect_url)
