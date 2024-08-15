@@ -54,7 +54,6 @@ def remove_from_bag(request, item_id):
     except Exception as e:
         return HttpResponse(status=500)
 
-
 def add_service_to_bag(request, service_id):
     """ Add service to the shopping bag """
 
