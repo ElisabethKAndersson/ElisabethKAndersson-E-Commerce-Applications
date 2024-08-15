@@ -41,12 +41,12 @@ def bag_service_contents(request):
 
     bag_service_items = []
     total = 0
-    product_count = 0
+    service_count = 0
     service_bag = request.session.get('service_bag', {})
 
-    for service_id, quantity in bag.service():
+    for service_id, quantity in bag.service.items():
         service = get_object_or_404(Service, pk=service_id)
-        total += quantity * servicet.price
+        total += quantity * service.price
         service_count += quantity
         bag_service_items.append({
             'service_id': service_id,
