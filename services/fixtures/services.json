@@ -1,6 +1,6 @@
 [
   {
-    "pk": 1,
+    "pk": 110,
     "model": "services.service",
     "fields": {
       "name": "Gym, single session",
@@ -8,7 +8,7 @@
 }
   },
   {
-    "pk": 2,
+    "pk": 111,
     "model": "services.service",
     "fields": {
       "name": "Tennis, single session",
@@ -16,7 +16,7 @@
 }
   },
   {
-    "pk": 3,
+    "pk": 112,
     "model": "services.service",
     "fields": {
       "name": "Monthly Fitness card",
@@ -26,7 +26,7 @@
     },
 
   {
-    "pk": 4,
+    "pk": 113,
     "model": "services.service",
     "fields": {
       "name": "Annual Fitness card",
