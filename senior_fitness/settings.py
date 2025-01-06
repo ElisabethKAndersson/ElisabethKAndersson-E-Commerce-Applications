@@ -34,6 +34,10 @@ ALLOWED_HOSTS = ['8000-elisabethka-elisabethka-zyqjm8soobq.ws.codeinstitute-ide.
                 '.herokuapp.com',
                 'senior-fitness-a9e489407d94.herokuapp.com/']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.codeinstitute-ide.net/',
+    'https://*.herokuapp.com'
+]
 
 # Application definition
 
